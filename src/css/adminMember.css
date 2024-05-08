@@ -1,0 +1,9 @@
+.member-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.detail-section-container{
+    padding-top: 100px;
+}
