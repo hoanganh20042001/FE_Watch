@@ -1,5 +1,5 @@
 # Sử dụng ảnh base node v14.16.1
-FROM node:19-alpine AS builder
+FROM node:16.15.0 AS builder
 
 # Tạo thư mục làm việc trong container
 WORKDIR /app
@@ -15,7 +15,7 @@ RUN npm install
 
 # Build production build
 
-FROM node:19-alpine AS runner
+FROM node:16.15.0 AS runner
 
 # Tạo thư mục làm việc trong container
 WORKDIR /app

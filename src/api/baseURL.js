@@ -1,5 +1,5 @@
 const getBaseURL = () => {
-    return 'http://192.168.8.107:6060/api/v1/';
+    return 'http://157.230.37.12:8080/api/v1/';
   };
   
   export default getBaseURL;
