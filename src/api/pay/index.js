@@ -21,7 +21,7 @@ const getListPay= async () => {
 const getListPayByUserId= async (userId) => {
    
     const response = await axios.get(
-        baseAPIURL + `http://localhost:8080/api/v1/pay/list-by-userId?userId=${userId}`,
+        baseAPIURL + `pay/list-by-userId?userId=${userId}`,
         {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -51,7 +51,7 @@ const pay = async (data) => {
   const tablePay= async () => {
    
     const response = await axios.get(
-       'http://localhost:8080/api/v1/pay/pay',
+        baseAPIURL+'pay/pay',
         {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`

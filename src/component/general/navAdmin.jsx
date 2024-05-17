@@ -47,25 +47,25 @@ export default function NavAdmin() {
         sessionStorage.clear();
         navigate("/signin");
     }
-    React.useEffect(() => {
-        const socket = io('ws://localhost:8080'); // Thay đổi địa chỉ máy chủ và namespace nếu cần
+    // React.useEffect(() => {
+    //     const socket = io('ws://localhost:8080'); // Thay đổi địa chỉ máy chủ và namespace nếu cần
 
-        socket.on('connect', () => {
-            console.log('Connected to WebSocket server');
-        });
+    //     socket.on('connect', () => {
+    //         console.log('Connected to WebSocket server');
+    //     });
 
-        socket.on('message', (Data) => {
-            console.log('New message received:', Data);
-            setOpened1(true)
-            setData(Data.fullName)
-            // Xử lý thông báo đến người dùng ở đây
-        });
+    //     socket.on('message', (Data) => {
+    //         console.log('New message received:', Data);
+    //         setOpened1(true)
+    //         setData(Data.fullName)
+    //         // Xử lý thông báo đến người dùng ở đây
+    //     });
 
-        // Hủy đăng ký sự kiện khi component unmount
-        return () => {
-            socket.disconnect();
-        };
-    }, []);
+    //     // Hủy đăng ký sự kiện khi component unmount
+    //     return () => {
+    //         socket.disconnect();
+    //     };
+    // }, []);
 
     return (
         <>

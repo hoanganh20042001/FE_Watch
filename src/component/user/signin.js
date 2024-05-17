@@ -27,7 +27,7 @@ export default function Signin() {
   const handleLogin = (values) => {
     
     console.log(values)
-    axios.post(`http://192.168.8.107:6060/api/v1/auth/login-client`, values).then((response) => {
+    axios.post(`http://157.230.37.12:8080/api/v1/auth/login-client`, values).then((response) => {
       console.log(response)
       if (response.data) {
         console.log("login successfull");

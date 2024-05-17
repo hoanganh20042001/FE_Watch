@@ -33,7 +33,7 @@ const getDetailProduct = async (id) => {
 const searchProduct = async (data) => {
 
   const response = await axios.get(
-    `http://localhost:8080/api/v1/product/list-all?page=1&limit=100&search=${data}`,
+    baseAPIURL +`product/list-all?page=1&limit=100&search=${data}`,
     {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`
@@ -79,7 +79,7 @@ const addProduct = async (productData, file) => {
     // const baseAPIURL = getBaseURL()
     // console.log(baseAPIURL)
     const response = await axios.post(
-      'http://localhost:8080/api/v1/product/create',
+      baseAPIURL +'product/create',
       formData,
       {
         headers: {
@@ -102,7 +102,7 @@ const addProduct = async (productData, file) => {
 };
 const deleteProduct = async (data) => {
   const response = await axios.post(
-   `http://localhost:8080/api/v1/product/delete?ProductId=${data}`, {},
+    baseAPIURL +`product/delete?ProductId=${data}`, {},
     {
       headers: {
         'content-type': 'application/json',
